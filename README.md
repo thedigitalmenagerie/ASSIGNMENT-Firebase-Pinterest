@@ -31,6 +31,7 @@ Your team has been tasked with creating pinterest.  If you live under a rock and
 * As a user, when I am logged in and the page loads, I should see all the boards that belong to me.
 
 * As a user, when I click on one of my boards, I should see a single board view that shows all pins for that board.
+* 
 
 * As a user, when I am on the single board view, there should be some way to go back to all my boards.
 
@@ -53,3 +54,30 @@ Your team has been tasked with creating pinterest.  If you live under a rock and
 * As a user I should be able to use your app on the internet - it should be deployed using Netlify.
 
 * As a developer, I want to see an amazing README for this project.
+
+Name of the Project:
+
+Practically Pinterest
+
+Overview of the project:
+
+Link to Figma Board:
+https://www.figma.com/file/z93FaygAnQwoK2ntqUGwLZ/Practically-Pinterest?node-id=0%3A1
+
+Link to the deployed project:
+
+Description of the user:
+
+List of features:
+
+HTML, SCSS, JS, BOOTSTRAP, WEBPACK, FIREBASE
+
+Screenshots of project:
+
+List of contributors and links to GH profiles:
+
+https://github.com/thedigitalmenagerie
+
+Link to Loom video walkthrough of application:
+
+Future Iterations will include:
