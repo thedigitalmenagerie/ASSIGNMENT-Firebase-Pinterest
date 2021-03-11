@@ -1,10 +1,9 @@
-import signOut from '../../helpers/auth/signOut';
+import signIn from '../../helpers/auth/signIn';
 
-const logoutButton = () => {
-  const domString = `<button id="google-auth" class="btn">
-    LOG OUT</button>`;
-  document.querySelector('#logOutButton').innerHTML = domString;
-  document.querySelector('#google-auth').addEventListener('click', signOut);
+const loginButton = () => {
+  const domString = '<button id="google-auth" class="btn btn-danger">GOOGLE LOGIN</button>';
+  document.querySelector('#login-button').innerHTML = domString;
+  document.querySelector('#google-auth').addEventListener('click', signIn);
 };
 
-export default logoutButton;
+export default loginButton;
