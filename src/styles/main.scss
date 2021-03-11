@@ -157,6 +157,8 @@ h6 {
   color: white;
   width: 50%;
   border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .form-group {
@@ -166,6 +168,38 @@ h6 {
 #submit-board {
   background-color: pink;
   color: white;
-  height: 2em;
+  height: 2.5em;
+  width: 25%;
+}
+
+.delete-pin-btn {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.update-pins-btn {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+#submit-pin-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  width: 50%;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#submit-pin {
+  background-color: pink;
+  color: white;
+  height: 2.5em;
   width: 25%;
 }

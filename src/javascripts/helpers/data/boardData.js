@@ -17,27 +17,23 @@ const deleteBoard = (firebaseKey, uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-const createBoard = (firebaseKey, uid) => new Promise((resolve, reject) => {
-  axios.post(`${dbUrl}/boards.json/${firebaseKey}.json`)
+const createBoard = (boardObject, uid) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/boards.json`, boardObject)
     .then((response) => {
-      const body = { firebaseKey: response.data.title };
-      axios.patch(`${dbUrl}/boards/${response.data.title}.json`, body)
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/boards/${response.data.name}.json`, body)
         .then(() => {
           getBoards(uid).then((booksArray) => resolve(booksArray));
         });
     }).catch((error) => reject(error));
 });
 
-// const updateBoard = (firebaseKey, boardObject) => new Promise((resolve, reject) => {
-//   axios.patch(`${dbUrl}/boards/${firebaseKey}.json`, boardObject)
-//     .then(() => getBoards(firebase.auth().currentUser.uid)).then((boardsArray) => resolve(boardsArray))
-//     .catch((error) => reject(error));
-// });
+const getSingleBoard = (boardId) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/authors/${boardId}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
 
-// const getBoardPins = (boardId) => new Promise((resolve, reject) => {
-//   axios.get(`${dbUrl}/boards.json?orderBy="author_id"&equalTo="${boardId}"`)
-//     .then((response) => resolve(Object.values(response.data)))
-//     .catch((error) => reject(error));
-// });
-
-export { getBoards, deleteBoard, createBoard };
+export {
+  getBoards, deleteBoard, createBoard, getSingleBoard,
+};

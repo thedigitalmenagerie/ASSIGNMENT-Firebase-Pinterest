@@ -1,7 +1,9 @@
-import board from '../../assets/board.png';
+import profilePic from '../../assets/profilePic.png';
 
 const showBoards = (array) => {
-  document.querySelector('#add-button').innerHTML = `<button class="btn btn-danger btn-lg mb-4" id="add-board-btn"><img src="${board}">Create Board<img src="${board}"></button>`;
+  document.querySelector('#profileContainer').innerHTML = `<img src="${profilePic}">`;
+  document.querySelector('h6').innerHTML = '@thedigitalmenagerie';
+  document.querySelector('#add-button').innerHTML = '<button class="btn btn-danger btn-sm mb-4" id="add-board-btn">Create Board</button>';
 
   document.querySelector('#content').innerHTML = '';
   document.querySelector('#formContainer').innerHTML = '';
