@@ -30,6 +30,8 @@ https://www.figma.com/file/z93FaygAnQwoK2ntqUGwLZ/Practically-Pinterest?node-id=
 
 Link to the deployed project:
 
+https://app.netlify.com/sites/hr-firebase-pinterest/settings/domain
+
 Description of the user:
 
 List of features:
