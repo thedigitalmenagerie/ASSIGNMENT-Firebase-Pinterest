@@ -1,4 +1,3 @@
-<img width="1440" alt="Screen Shot 2021-03-11 at 9 18 37 PM" src="https://user-images.githubusercontent.com/76716670/110887221-83f9b580-82af-11eb-8dbf-545a17d09f1c.png">
 ### Part 6: Deploy and Readme
 * As a user I should be able to use your app on the internet - it should be deployed using Netlify.
 
