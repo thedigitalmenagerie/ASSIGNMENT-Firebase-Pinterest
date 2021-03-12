@@ -3,7 +3,7 @@ import 'firebase/auth';
 import { showBoards, noBoards } from '../components/boards';
 import addBoardForm from '../components/forms/addBoard';
 import {
-  getBoards, deleteBoard, createBoard, getSingleBoard,
+  getBoards, createBoard, getSingleBoard,
 } from '../helpers/data/boardData';
 import {
   getPins, deletePins, getSinglePin, createPin, updatePin, getBoardPins
@@ -13,6 +13,7 @@ import addPinForm from '../components/forms/addPin';
 import formModal from '../components/forms/formModal';
 import editPinForm from '../components/forms/editPin';
 import boardInfo from '../components/boardPins';
+import deleteBoardPins from '../helpers/data/boardPins';
 
 const domEvents = (uid) => {
   document.querySelector('#showCreatePinButton').addEventListener('click', () => {
@@ -37,12 +38,10 @@ const domEvents = (uid) => {
 
   document.querySelector('body').addEventListener('click', (e) => {
     if (e.target.id.includes('add-board-btn')) {
-      console.warn('Clicked add board button', e.target.id);
       addBoardForm();
     }
 
     if (e.target.id.includes('add-pin-btn')) {
-      console.warn('Clicked add pin button', e.target.id);
       addPinForm();
     }
 
@@ -64,7 +63,6 @@ const domEvents = (uid) => {
         boardId: document.querySelector('#board').value,
         uid: firebase.auth().currentUser.uid
       };
-      console.warn(pinObject);
       createPin(pinObject, uid).then((pinsArray) => showPins(pinsArray));
     }
 
@@ -91,7 +89,7 @@ const domEvents = (uid) => {
 
     if (e.target.id.includes('delete-board')) {
       const firebaseKey = e.target.id.split('--')[1];
-      deleteBoard(firebaseKey, uid).then((boardsArray) => showBoards(boardsArray));
+      deleteBoardPins(firebaseKey, uid).then((boardsArray) => showBoards(boardsArray));
     }
 
     if (e.target.id.includes('delete-pin')) {
