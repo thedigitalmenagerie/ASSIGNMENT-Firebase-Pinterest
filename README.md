@@ -1,19 +1,4 @@
-# Pinterest
-
-Your team has been tasked with creating pinterest.  If you live under a rock and have never used pinterest before go figure out what it does. TLDR; users create boards and can pin urls to the boards
-
-## Requirements
-* Clean code - single responsibility principle
-* ES6 Modules bundled with webpack
-* No errors - linters should be clean
-* SASS and Bootstrap for styling
-* Completely planned out - before each section you should be making new cards before you code.  You should have wireframes and an ERD
-
-### Part 3: DELETE
-* As a user, I should be able to delete a pin from one of my boards.
-
-* As a user, when I delete one of my boards all pins that were on that board should be deleted as well.
-
+<img width="1440" alt="Screen Shot 2021-03-11 at 9 18 37 PM" src="https://user-images.githubusercontent.com/76716670/110887221-83f9b580-82af-11eb-8dbf-545a17d09f1c.png">
 ### Part 6: Deploy and Readme
 * As a user I should be able to use your app on the internet - it should be deployed using Netlify.
 
@@ -40,10 +25,14 @@ HTML, SCSS, JS, BOOTSTRAP, WEBPACK, FIREBASE
 
 Screenshots of project:
 
+<img width="1440" alt="Screen Shot 2021-03-11 at 9 18 37 PM" src="https://user-images.githubusercontent.com/76716670/110887260-970c8580-82af-11eb-9b72-f9005d52d9c5.png">
+<img width="1440" alt="Screen Shot 2021-03-11 at 9 18 59 PM" src="https://user-images.githubusercontent.com/76716670/110887242-8cea8700-82af-11eb-9ac7-c16bcdd5d99f.png">
+<img width="1440" alt="Screen Shot 2021-03-11 at 9 19 19 PM" src="https://user-images.githubusercontent.com/76716670/110887266-9a077600-82af-11eb-9a1a-9452a31582e5.png">
+<img width="1440" alt="Screen Shot 2021-03-11 at 9 20 46 PM" src="https://user-images.githubusercontent.com/76716670/110887320-b4d9ea80-82af-11eb-8c7d-441e0f6caca2.png">
+
+
 List of contributors and links to GH profiles:
 
 https://github.com/thedigitalmenagerie
 
 Link to Loom video walkthrough of application:
-
-Future Iterations will include:
