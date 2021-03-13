@@ -3,7 +3,7 @@ import 'firebase/auth';
 import { showBoards, noBoards } from '../components/boards';
 import addBoardForm from '../components/forms/addBoard';
 import {
-  getBoards, createBoard, getSingleBoard,
+  getBoards, createBoard,
 } from '../helpers/data/boardData';
 import {
   getPins, deletePins, getSinglePin, createPin, updatePin, getBoardPins
@@ -12,7 +12,6 @@ import { showPins, noPins } from '../components/pins';
 import addPinForm from '../components/forms/addPin';
 import formModal from '../components/forms/formModal';
 import editPinForm from '../components/forms/editPin';
-import boardInfo from '../components/boardPins';
 import deleteBoardPins from '../helpers/data/boardPins';
 
 const domEvents = (uid) => {
@@ -69,7 +68,7 @@ const domEvents = (uid) => {
     if (e.target.id.includes('update-pins-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
       formModal('Update Pin');
-      getSinglePin(firebaseKey).then((pinObject) => editPinForm(pinObject));
+      getSinglePin(firebaseKey, uid).then((pinObject) => editPinForm(pinObject));
     }
 
     if (e.target.id.includes('submit-update-pin')) {
@@ -99,7 +98,6 @@ const domEvents = (uid) => {
     if (e.target.id.includes('view-pins-btn')) {
       const boardId = e.target.id.split('--')[1];
       getBoardPins(boardId).then((pinsArray) => showPins(pinsArray));
-      getSingleBoard(boardId).then((boards) => boardInfo(boards));
     }
   });
 };

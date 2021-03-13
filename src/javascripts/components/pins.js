@@ -9,7 +9,6 @@ const showPins = (array) => {
     document.querySelector('#content').innerHTML += `<div class="card" style="width: 18rem;">
     <img src="${item.image}" class="card-img-top" alt="${item.title}">
     <div class="card-body">
-    <h4 class="card-title mx-auto">${item.title}</h4>
     <h5 class="card-title mx-auto">${item.title}</h5>
     <button class="btn border-light outline-light view-pins-btn" data-toggle="modal" data-target="#formModal" id="update-pins-btn--${item.firebaseKey}">Update Pin</button>
       <button class="btn border-light outline-light delete-pin-btn" id="delete-pin--${item.firebaseKey}">Delete Pin</button>
