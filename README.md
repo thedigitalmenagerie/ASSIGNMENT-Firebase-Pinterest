@@ -18,6 +18,8 @@ https://app.netlify.com/sites/hr-firebase-pinterest/settings/domain
 
 Description of the user:
 
+As a user, I can log in and see all the pins that belong to me. I can switch to view all the pins that belong to me and return to board view. In board view, I can click to view pins belonging to a specific board. I can update pins to change their description and image URL, as well as change which board they belong to. I can create and delete pins and boards. When deleting boards, it deletes all the associated pins. 
+
 List of features:
 
 HTML, SCSS, JS, BOOTSTRAP, WEBPACK, FIREBASE
