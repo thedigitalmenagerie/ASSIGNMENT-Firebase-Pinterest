@@ -9,7 +9,7 @@ const checkLoginStatus = () => {
   firebase.initializeApp(firebaseConfig);
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      startApp(user);
+      startApp(user.uid);
     } else {
       beforeAuthDomBuilder();
       loginButton();
