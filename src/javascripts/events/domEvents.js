@@ -40,10 +40,6 @@ const domEvents = (uid) => {
       addBoardForm();
     }
 
-    if (e.target.id.includes('add-pin-btn')) {
-      addPinForm();
-    }
-
     if (e.target.id.includes('submit-board')) {
       e.preventDefault();
       const boardObject = {
@@ -52,6 +48,25 @@ const domEvents = (uid) => {
         uid: firebase.auth().currentUser.uid
       };
       createBoard(boardObject, uid).then((boardArray) => showBoards(boardArray));
+    }
+
+    if (e.target.id.includes('view-pins-btn')) {
+      const boardId = e.target.id.split('--')[1];
+      getBoardPins(boardId).then((pinsArray) => showPins(pinsArray));
+    }
+
+    if (e.target.id.includes('delete-pin')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      deletePins(firebaseKey, uid).then((pinsArray) => showPins(pinsArray));
+    }
+
+    if (e.target.id.includes('delete-board')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      deleteBoardPins(firebaseKey, uid).then((boardsArray) => showBoards(boardsArray));
+    }
+
+    if (e.target.id.includes('add-pin-btn')) {
+      addPinForm();
     }
 
     if (e.target.id.includes('submit-pin')) {
@@ -68,7 +83,7 @@ const domEvents = (uid) => {
     if (e.target.id.includes('update-pins-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
       formModal('Update Pin');
-      getSinglePin(firebaseKey, uid).then((pinObject) => editPinForm(pinObject));
+      getSinglePin(firebaseKey).then((pinObject) => editPinForm(pinObject));
     }
 
     if (e.target.id.includes('submit-update-pin')) {
@@ -81,23 +96,9 @@ const domEvents = (uid) => {
         boardId: document.querySelector('#board').value,
         uid: firebase.auth().currentUser.uid
       };
-      updatePin(firebaseKey, pinObject).then((pinsArray) => showPins(pinsArray));
+      updatePin(firebaseKey, pinObject, uid).then((pinsArray) => showPins(pinsArray));
 
       $('#formModal').modal('toggle');
-    }
-
-    if (e.target.id.includes('delete-board')) {
-      const firebaseKey = e.target.id.split('--')[1];
-      deleteBoardPins(firebaseKey, uid).then((boardsArray) => showBoards(boardsArray));
-    }
-
-    if (e.target.id.includes('delete-pin')) {
-      const firebaseKey = e.target.id.split('--')[1];
-      deletePins(firebaseKey, uid).then((pinsArray) => showPins(pinsArray));
-    }
-    if (e.target.id.includes('view-pins-btn')) {
-      const boardId = e.target.id.split('--')[1];
-      getBoardPins(boardId).then((pinsArray) => showPins(pinsArray));
     }
   });
 };

@@ -8,7 +8,7 @@ import { getBoards } from '../helpers/data/boardData';
 const startApp = (userObject) => {
   domBuilder();
   navBar();
-  domEvents(userObject.uid);
+  domEvents(userObject);
   logoutButton();
   getBoards().then((boards) => showBoards(boards));
 };
