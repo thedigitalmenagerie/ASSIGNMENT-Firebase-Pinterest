@@ -1,8 +1,3 @@
-### Part 6: Deploy and Readme
-* As a user I should be able to use your app on the internet - it should be deployed using Netlify.
-
-* As a developer, I want to see an amazing README for this project.
-
 Name of the Project:
 
 Practically Pinterest
